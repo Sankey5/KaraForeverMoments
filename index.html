@@ -1,5 +1,6 @@
 <head>
     <title>Kara Forever Moments</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
@@ -7,8 +8,9 @@
     <div class="grid grid-cols-1">
         <h1 class="text-center text-6xl">Kara Forever Moments</h1>
     </div>
-    <div class="grid grid-cols-2 items-center">
-        <img id="headshot" src="img/KaraHeadshot.jpg" alt="Photo of photographer taking a picture of the viewer">
+    <br>
+    <div class="grid lg:grid-cols-2 md:grid-cols-1 items-center">
+        <img id="headshot" class="aspect-2/3" src="img/KaraHeadshot.jpg" alt="Photo of photographer taking a picture of the viewer">
         <div id="bio" class="text-center m-8 text-lg">
             <p>Hi There!</p>
             <br>
@@ -21,6 +23,43 @@
             <p>When I'm not behind the lens, you'll likely find me in the thick of family game nights, fiercely competing in board games, or taking long walks with my dog, Ace. My amazing husband and I also love exploring new exciting places, finding adventure in every corner of the world. But no matter where life takes me, I always return to photography-my ultimate way of telling stories, one frame at a time.</p>
             <br>
             <p>Being a photographer has been a passion of mine since growing up. It brings great joy to capture those beautiful raw emotions that will tell a story for a lifetime and bring happiness to my clients who will cherish their forever moments.</p>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div>
+        <h1 class="text-center text-6xl">Services</h1>
+    </div>
+    <br>
+    <div id="services" class="grid lg:grid-cols-2 md:grid-cols-1 items-center justify-center">
+        <div id="family-service"  class="relative h-3/4 w-3/4 group rounded-xl shadow-lg">
+            <img src="img/FamilyService.jpg"
+                 class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"/>
+            <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-black text-5xl">Family</h3>
+            </div>
+        </div>
+        <div id="model-service"  class="relative h-3/4 w-3/4 group rounded-xl shadow-lg">
+            <img src="img/ModelService.jpg"
+                 class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"/>
+            <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-black text-5xl">Model</h3>
+            </div>
+        </div>
+        <div id="couples-service"  class="relative group rounded-xl shadow-lg">
+            <img src="img/CouplesService.jpg"
+                 class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"/>
+            <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-black text-5xl">Couples</h3>
+            </div>
+        </div>
+        <div id="maternity-service"  class="relative group rounded-xl shadow-lg">
+            <img src="img/MaternityService.jpg"
+            class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50"/>
+            <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <h3 class="text-black text-5xl">Maternity</h3>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
