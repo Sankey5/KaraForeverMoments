@@ -5,13 +5,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container mx-auto">
+    <div class="container mx-auto ">
         <div class="grid grid-cols-1">
             <h1 class="text-center text-6xl">Kara Forever Moments</h1>
         </div>
         <br>
         <div class="grid lg:grid-cols-2 md:grid-cols-1 items-center">
-            <img id="headshot" class="aspect-2/3" src="img/KaraHeadshot.jpg" alt="Photo of photographer taking a picture of the viewer">
+            <img id="headshot" class="aspect-2/3 rounded-xl shadow-lg" src="img/KaraHeadshot.jpg" alt="Photo of photographer taking a picture of the viewer">
             <div id="bio" class="text-center m-8 text-lg">
                 <p>Hi There!</p>
                 <br>
@@ -33,83 +33,130 @@
             <h1 class="text-center text-6xl">Services</h1>
         </div>
         <br>
-        <div id="services" class="grid m-20 gap-8 lg:grid-cols-2 md:grid-cols-1 place-content-center justify-center">
-            <div id="model-service"  class="relative group aspect-2/3">
-                <img src="img/ModelService.jpg"
-                     class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
-                <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-black text-5xl">Model</h3>
-                </div>
-            </div>
-            <div id="couples-service"  class="relative group aspect-2/3">
-                <img src="img/CouplesService.jpg"
-                     class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
-                <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-black text-5xl">Couples</h3>
-                </div>
-            </div>
-            <div id="maternity-service"  class="relative group aspect-2/3">
-                <img src="img/MaternityService.jpg"
-                     class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
-                <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-black text-5xl">Maternity</h3>
-                </div>
-            </div>
-            <div id="family-service"  class="relative group aspect-2/3">
-                <img src="img/FamilyService.jpg"
-                     class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
-                <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <h3 class="text-black text-5xl">Family</h3>
-                </div>
-            </div>
-        </div>
-        <form id="contact-me">
-            <div class="space-y-12">
-                <div class="border-b border-gray-900/10 pb-12">
-                    <h2 class="text-base/7 font-semibold text-gray-900">Personal Information</h2>
-
-                    <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-                        <div class="sm:col-span-3">
-                            <label for="first-name" class="block text-sm/6 font-medium text-gray-900">First name</label>
-                            <div class="mt-2">
-                                <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+        <div id="services" class="grid p-20 gap-8 lg:grid-cols-2 md:grid-cols-1 place-content-center justify-center">
+            <div id="model-service">
+                <div class="top-card relative group aspect-2/3">
+                    <img src="img/ModelService.jpg"
+                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
+                    <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-black text-5xl">Model</h3>
+                    </div>
+                    <div class="overlay rounded-xl shadow-lg place-content-center justify-center">
+                        <div class="grid grid-cols-1 w-75 h-75 gap-8 text-center">
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Mini</h1>
                             </div>
-                        </div>
-
-                        <div class="sm:col-span-3">
-                            <label for="last-name" class="block text-sm/6 font-medium text-gray-900">Last name</label>
-                            <div class="mt-2">
-                                <input id="last-name" type="text" name="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
-                            </div>
-                        </div>
-
-                        <div class="sm:col-span-4">
-                            <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
-                            <div class="mt-2">
-                                <input id="email" type="email" name="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
-                            </div>
-                        </div>
-
-                        <div class="sm:col-span-3">
-                            <label for="country" class="block text-sm/6 font-medium text-gray-900">Country</label>
-                            <div class="mt-2 grid grid-cols-1">
-                                <select id="country" name="country" autocomplete="country-name" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
-                                    <option>United States</option>
-                                    <option>Canada</option>
-                                    <option>Mexico</option>
-                                </select>
-                                <svg viewBox="0 0 16 16" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
-                                    <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
-                                </svg>
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Full</h1>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div id="couple-service">
+                <div class="top-card relative group aspect-2/3">
+                    <img src="img/CouplesService.jpg"
+                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
+                    <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-black text-5xl">Couples</h3>
+                    </div>
+                    <div class="overlay rounded-xl shadow-lg place-content-center justify-center">
+                        <div class="grid grid-cols-1 w-75 h-75 gap-8 text-center">
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Mini</h1>
+                            </div>
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Full</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="maternity-service">
+                <div class="top-card relative group aspect-2/3">
+                    <img src="img/MaternityService.jpg"
+                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
+                    <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-black text-5xl">Maternity</h3>
+                    </div>
+                    <div class="overlay rounded-xl shadow-lg place-content-center justify-center">
+                        <div class="grid grid-cols-1 w-75 h-75 gap-8 text-center">
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Mini</h1>
+                            </div>
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Full</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="family-service">
+                <div class="top-card relative group aspect-2/3">
+                    <img src="img/FamilyService.jpg"
+                         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
+                    <div class="absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-black text-5xl">Family</h3>
+                    </div>
+                    <div class="overlay rounded-xl shadow-lg place-content-center justify-center">
+                        <div class="grid grid-cols-1 w-75 h-75 gap-8 text-center">
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Mini</h1>
+                            </div>
+                            <div class="flex items-center justify-center rounded-xl shadow-xl text-white border-2 border-solid border-white">
+                                <h1 class="text-4xl">Full</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form id="contact-me" class="mb-12">
+            <div class="space-y-6">
+                <div class="border-b border-b-1 border-gray-900/10 pb-12">
+                    <h2 class="text-5xl font-semibold text-gray-900">Contact me!</h2>
+                </div>
 
-            <div class="mt-6 flex items-center justify-end gap-x-6">
-                <button type="button" class="text-sm/6 font-semibold text-gray-900">Cancel</button>
-                <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Save</button>
+                <div class="sm:col-span-3">
+                    <label for="service-type" class="block text-sm/6 font-medium text-gray-900">Service</label>
+                    <div class="mt-2 grid grid-cols-1">
+                        <select id="service-type" name="service-type" autocomplete="service-type" class="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-1.5 pr-8 pl-3 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+                            <option>Model</option>
+                            <option>Couples</option>
+                            <option>Maternity</option>
+                            <option>Family</option>
+                        </select>
+                        <svg viewBox="0 0 16 16" data-slot="icon" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 mr-2 size-5 self-center justify-self-end text-gray-500 sm:size-4">
+                            <path d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="mt-10 grid justify-stretch grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+                    <div class="sm:col-span-3">
+                        <label for="first-name" class="block text-sm/6 font-medium text-gray-900">First name</label>
+                        <div class="mt-2">
+                            <input id="first-name" type="text" name="first-name" autocomplete="given-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-3">
+                        <label for="last-name" class="block text-sm/6 font-medium text-gray-900">Last name</label>
+                        <div class="mt-2">
+                            <input id="last-name" type="text" name="last-name" autocomplete="family-name" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-4">
+                        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email address</label>
+                        <div class="mt-2">
+                            <input id="email" type="email" name="email" autocomplete="email" class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6" />
+                        </div>
+                    </div>
+                    <div class="sm:col-span-2 items-center justify-end flex">
+                        <button type="submit" class="rounded-md bg-indigo-600 px-3 py-2 text-xl font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Contact me</button>
+                    </div>
+                </div>
             </div>
         </form>
     </div>

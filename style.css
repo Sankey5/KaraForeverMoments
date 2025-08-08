@@ -1,0 +1,29 @@
+.top-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: black;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay.slide-in {
+    transform: translateX(-100%);
+}
+
+.overlay.slide-out {
+    transform: translateX(100%);
+}
+
+.overlay.slide-out::after {
+    display: none;
+}
