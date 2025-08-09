@@ -30,3 +30,7 @@
 .opaque {
     opacity: 50%;
 }
+
+.reveal-title {
+    opacity: 100;
+}

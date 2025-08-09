@@ -3,16 +3,18 @@ const serviceOption = document.querySelectorAll(".service-option");
 const serviceCategory = document.querySelector("#service-category");
 const sessionSize = document.querySelector("#session-size");
 
-function coverCard(overlayElement, imageElement) {
+function coverCard(overlayElement, imageElement, serviceTitle) {
     overlayElement.classList.add("slide-in");
     overlayElement.classList.remove("slide-out");
-    imageElement.classList.add("opaque")
+    imageElement.classList.add("opaque");
+    serviceTitle.classList.add("reveal-title");
 }
 
-function revealCards(overlayElement, imageElement) {
+function revealCards(overlayElement, imageElement, serviceTitle) {
     overlayElement.classList.remove("slide-in");
     overlayElement.classList.add("slide-out");
-    imageElement.classList.remove("opaque")
+    imageElement.classList.remove("opaque");
+    serviceTitle.classList.remove("reveal-title");
 }
 
 topCard.forEach( card => {
@@ -33,7 +35,7 @@ serviceOption.forEach((option) => {
 
         let sessionLength = e.currentTarget.querySelector("h1").textContent;
         let selectedSessionLengthOption = Array.from(sessionSize.options).filter(element => {
-            return element.text.split(" ")[0].toLowerCase().includes(sessionLength.toLowerCase());
+            return element.text.split(" ")[0].toLowerCase().includes(sessionLength.split(" ")[0].toLowerCase());
         })[0];
         sessionSize.value = selectedSessionLengthOption.text;
 
@@ -52,9 +54,10 @@ serviceOption.forEach((option) => {
 function toggleTopCard(topCardElement) {
     let overlay = topCardElement.querySelector(".overlay");
     let img = topCardElement.querySelector("img");
+    let serviceTitle = topCardElement.querySelector('.service-title');
     if (overlay.classList.contains("slide-in")) {
-        revealCards(overlay, img);
+        revealCards(overlay, img, serviceTitle);
     } else {
-        coverCard(overlay, img);
+        coverCard(overlay, img, serviceTitle);
     }
 }
