@@ -1,8 +1,10 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 <head>
     <title>Kara Forever Moments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" th:href="@{/css/style.build.tailwind.css}">
 </head>
 <body style="background-color: #ebdbca">
 <div class="container mx-auto">
@@ -11,7 +13,7 @@
     </div>
     <br>
     <div class="grid lg:grid-cols-2 md:grid-cols-1 items-center">
-        <img id="headshot" class="aspect-2/3 rounded-xl shadow-lg" src="img/KaraHeadshot.jpg"
+        <img id="headshot" class="aspect-2/3 rounded-xl shadow-lg" th:src="@{/images/KaraHeadshot.jpg}"
              alt="Photo of photographer taking a picture of the viewer">
         <div id="bio" class="text-center m-8 text-lg">
             <p>Hi There!</p>
@@ -55,7 +57,7 @@
     <div class="max-w-5xl max-h-5xl mx-auto">
         <div id="services" class="grid p-20 gap-8 lg:grid-cols-2 md:grid-cols-1 place-content-center justify-center">
             <div id="model-service" class="top-card relative group aspect-2/3">
-                <img src="img/ModelService.jpg"
+                <img th:src="@{/images/ModelService.jpg}"
                      class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
                 <div class="service-title absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 class="text-black text-5xl">Model</h3>
@@ -72,7 +74,7 @@
                 </div>
             </div>
             <div id="couple-service" class="top-card relative group aspect-2/3">
-                <img src="img/CouplesService.jpg"
+                <img th:src="@{/images/CouplesService.jpg}"
                      class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
                 <div class="service-title absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 class="text-black text-5xl">Couples</h3>
@@ -89,7 +91,7 @@
                 </div>
             </div>
             <div id="maternity-service" class="top-card relative group aspect-2/3">
-                <img src="img/MaternityService.jpg"
+                <img th:src="@{/images/MaternityService.jpg}"
                      class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
                 <div class="service-title absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 class="text-black text-5xl">Maternity</h3>
@@ -106,7 +108,7 @@
                 </div>
             </div>
             <div id="family-service" class="top-card relative group aspect-2/3">
-                <img src="img/FamilyService.jpg"
+                <img th:src="@{/images/FamilyService.jpg}"
                      class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
                 <div class="service-title absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     <h3 class="text-black text-5xl">Family</h3>
@@ -202,5 +204,6 @@
         </div>
     </form>
 </div>
-<script src="script.js"></script>
+<script th:src="@{/js/script.js}"></script>
 </body>
+</html>

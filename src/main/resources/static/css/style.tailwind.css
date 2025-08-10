@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 .top-card {
     position: relative;
     overflow: hidden;
