@@ -1,5 +1,32 @@
 @import "tailwindcss";
 
+.email-notification {
+    left: 30%;
+    right: 30%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name: slide-it;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slide-it {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    5% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 .top-card {
     position: relative;
     overflow: hidden;

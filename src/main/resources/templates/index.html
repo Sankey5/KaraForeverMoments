@@ -5,6 +5,7 @@
     <title>Kara Forever Moments</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" th:href="@{/css/style.build.tailwind.css}">
+    <script src="https://unpkg.com/htmx.org@2.0.6"></script>
 </head>
 <body style="background-color: #ebdbca">
 <div class="container mx-auto">
@@ -129,12 +130,17 @@
     <br>
     <hr>
     <br>
-    <form id="contact-me" class="mb-12">
+    <form id="contact-me" class="mb-12"
+            hx-post="/email"
+            hx-swap="innerHTML transition:true"
+            hx-target="#form-response">
         <div class="space-y-6">
+            <div id="form-response" class="block relative">
+
+            </div>
             <div class="border-b border-b-1 border-gray-900/10 pb-12">
                 <h2 class="text-5xl font-semibold text-gray-900">Contact me!</h2>
             </div>
-
             <div class="grid md:grid-cols-2 sm:grid-cols-1 gap-x-6 gap-y-8">
                 <div>
                     <label for="service-category" class="text-sm/6 font-medium text-gray-900">Service</label>

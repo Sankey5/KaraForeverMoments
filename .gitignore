@@ -1,4 +1,4 @@
+src/main/resources/.env
 /.idea/
-/.idea/**
+/target/
 /node_modules/
-/node_modules/**
