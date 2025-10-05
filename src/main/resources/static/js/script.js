@@ -61,3 +61,47 @@ function toggleTopCard(topCardElement) {
         coverCard(overlay, img, serviceTitle);
     }
 }
+
+// carousel logic
+
+const carouselElem = document.querySelector("#carousel");
+const pictures = carouselElem.querySelectorAll(".slide-container>img");
+let currentPictureIndex = 0;
+const carouselSize = pictures.length;
+
+function getCurrentPictureIndex() {
+    for (i = 0; i < carouselSize; i++) {
+        let pic = pictures[i];
+        if (pic.classList.contains("active")) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+function swapPictureClasses(oldPicContainer, newPicContainer) {
+    oldPicContainer.classList.remove("active");
+    newPicContainer.classList.add("active");
+}
+
+function changeSlider() {
+    currentPictureIndex = getCurrentPictureIndex();
+    if (currentPictureIndex == -1) {
+        console.warn("Unable to get current carousel picture");
+    }
+    let nextPictureIndex = (currentPictureIndex + 1) % carouselSize;
+    let oldPic = pictures[currentPictureIndex];
+    let newPic = pictures[nextPictureIndex];
+
+    // Fallback for no transition API
+    if(!document.startViewTransition) {
+        swapPictureClasses(oldPic, newPic);
+        return;
+    }
+
+    const transition = document.startViewTransition(() => {
+        swapPictureClasses(oldPic, newPic);
+    });
+}
+
+letIntervalFunction = setInterval(changeSlider, 7000);

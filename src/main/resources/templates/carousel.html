@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+    <div th:fragment="carousel" id="carousel" class="carousel-main">
+        <div class="slide-container">
+            <img th:each="picture, stats : ${pictures}" th:class="${stats.first} ? 'active' : ''" th:src="${picture.url}" th:alt="${picture.description}">
+        </div>
+    </div>
+</html>

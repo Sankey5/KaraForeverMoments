@@ -1,5 +1,39 @@
 @import "tailwindcss";
 
+.logo {
+    top: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    z-index: 2;
+}
+
+/*Carousel*/
+
+.slide-container {
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide-container img {
+    @apply xl:object-top object-center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease;
+}
+
+.slide-container img.active {
+    opacity: 1;
+    z-index: 1;
+}
+
+/*Email notification*/
+
 .email-notification {
     left: 30%;
     right: 30%;
@@ -26,6 +60,8 @@
         opacity: 0;
     }
 }
+
+/*General*/
 
 .top-card {
     position: relative;

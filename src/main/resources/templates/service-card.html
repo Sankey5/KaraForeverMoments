@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
+<div th:fragment="service-card" th:each="service : ${services}" th:id="${#strings.toLowerCase(service.name)} + '-service'" class="top-card relative group aspect-2/3">
+    <img th:src="${service.picture.url}" th:alt="${service.picture.description}"
+         class="w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-50 rounded-xl shadow-lg"/>
+    <div class="service-title absolute top-0 left-0 m-8 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <h3 class="text-black text-5xl" th:text="${service.name}"></h3>
+    </div>
+    <div class="overlay rounded-xl place-content-center justify-center">
+        <div class="grid grid-cols-1 gap-8 text-center">
+            <div class="service-option flex items-center justify-center rounded-xl shadow-xl border-2 border-solid">
+                <h1 class="sm:text-4xl text-2xl m-4">Mini Session</h1>
+            </div>
+            <div class="service-option flex items-center justify-center rounded-xl shadow-xl border-2 border-solid">
+                <h1 class="sm:text-4xl text-2xl m-4">Full Session</h1>
+            </div>
+        </div>
+    </div>
+</div>
+</html>
