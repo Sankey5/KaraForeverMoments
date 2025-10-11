@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
-<div class="email-notification text-center rounded-xl" th:classappend=" ${failed} ? 'bg-green-600' : 'bg-red-600'">
-    <h1 class="text-2xl">Email Sent Successfully!</h1>
+<div class="email-notification text-center rounded-xl" th:classappend="${failed} ? 'email-success' : 'email-fail'">
+    <h1 class="text-2xl" th:text="${failed} ? 'Email Sent Successfully!' : 'Email Failed To Send!'">!</h1>
 </div>
 </html>

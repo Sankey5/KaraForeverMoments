@@ -2,6 +2,9 @@ package com.karaforevermoments.controller;
 
 import com.karaforevermoments.data.Picture;
 import com.karaforevermoments.data.Service;
+import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.MailAuthenticationException;
 import org.springframework.mail.MailException;
@@ -17,6 +20,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/")
+@Slf4j
 public class WebController {
     @Autowired
     private EmailService emailService;
@@ -57,7 +61,7 @@ public class WebController {
             //this.emailService.sendEmail(service, size, name, email);
             model.addAttribute("failed", false);
         } catch (MailException e) {
-            System.out.println("Mail exception: " + e.getMessage());
+            log.error("Mail exception: {}", e.getMessage());
             model.addAttribute("failed", true);
         }
         i++;
